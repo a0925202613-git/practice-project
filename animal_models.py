@@ -23,21 +23,26 @@ class Animal:
         """回傳寵物的基本資訊。"""
         #### [任務] 實作 get_info ####
         # 預期輸出範例: "🐾 小花 (Cat)"
-        pass
+        return f"🐾{self.name}({self.species})"
+    
+my_pet=Animal("小花","Cat")
+print(my_pet.get_info())
+
+
 
 
 # --- 子類別 1: Cat (繼承自 Animal) ---
 class Cat(Animal):
     def __init__(self, name, favorite_food="魚"):
         #### [任務] 呼叫父類別建構式，物種設為 "Cat" ####
-        
+        super().__init__(name,"Cat")
         self.favorite_food = favorite_food
 
     def make_sound(self):
         """【多型】覆寫父類別方法。"""
         #### [任務] 讓貓發出聲音 ####
         # 預期輸出範例: "[小花] 喵喵～ 想吃魚！"
-        pass
+        print(f"{self.name}喵喵～ 想吃{self.favorite_food}！")
 
     def climb_tree(self):
         """貓咪特有行為。"""
@@ -48,14 +53,14 @@ class Cat(Animal):
 class Dog(Animal):
     def __init__(self, name, breed="米克斯"):
         #### [任務] 呼叫父類別建構式，物種設為 "Dog" ####
-        
+        super().__init__(name,"Dog")
         self.breed = breed
         
     def make_sound(self):
         """【多型】覆寫父類別方法。"""
         #### [任務] 讓狗發出聲音 ####
         # 預期輸出範例: "[旺財] 汪汪！我是一隻柴犬！"
-        pass
+        print(f"{self.name}汪汪！我是一隻{self.breed}！")
 
     def fetch(self):
         """狗狗特有行為。"""
@@ -66,13 +71,13 @@ class Dog(Animal):
 class Turtle(Animal):
     def __init__(self, name):
         #### [任務] 呼叫父類別建構式，物種設為 "Turtle" ####
-        pass
+        super().__init__(name,"Turtle")
         
     def make_sound(self):
         """【多型】覆寫父類別方法。"""
         #### [任務] 讓烏龜發出聲音 ####
         # 預期輸出範例: "[龜龜] ...（緩慢地眨眼）..."
-        pass
+        print(f"{self.name}...(緩慢地眨眼）...")
         
     def hide_in_shell(self):
         """烏龜特有行為。"""
@@ -102,4 +107,15 @@ def introduce_all_animals(animal_list):
     # [小花] 喵喵～ 想吃魚！
     # [旺財] 汪汪！我是一隻柴犬！
     # [龜龜] ...（緩慢地眨眼）...
-    pass
+    for animal in animal_list:
+        animal.make_sound()
+
+pets = [
+    Cat("小花", "魚"),
+    Dog("旺財", "柴犬"),
+    Turtle("龜龜")
+]
+
+let_animal_speak(pets[0])
+
+introduce_all_animals(pets)
