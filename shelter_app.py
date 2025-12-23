@@ -20,12 +20,12 @@ def show_all_pets(pets_list):
     #   1. 小花 (Cat)
     #   2. 旺財 (Dog)
     #   3. 龜龜 (Turtle)
-<<<<<<< HEAD
+HEAD
     for i, pet in enumerate(pets_list,start=1):
         print(f"{i}.{pet.name}({pet.species})")
 =======
     pass
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
 
 
 def add_pet_interactive(pets_list):
@@ -34,20 +34,20 @@ def add_pet_interactive(pets_list):
     print("  可選類型: cat / dog / turtle")
     
     #### [任務] 用 input() 取得寵物類型和名字 ####
-<<<<<<< HEAD
+HEAD
     pet_type = input("請輸入寵物類型:").lower()
     pet_name = input("請輸入寵物名字:")
 =======
     pet_type = None
     pet_name = None
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
     
     #### [任務] 用 if/elif/else 根據類型建立對應物件，並加入 pets_list ####
     # - cat: 建立 Cat 物件
     # - dog: 額外詢問品種，建立 Dog 物件  
     # - turtle: 建立 Turtle 物件
     # - 其他: 印出 "❌ 不支援的寵物類型"
-<<<<<<< HEAD
+HEAD
     if pet_type == "cat":
         pets_list.append(Cat(pet_name))
     elif pet_type == "dog":
@@ -57,9 +57,9 @@ def add_pet_interactive(pets_list):
         pets_list.addend(Turtle(pet_name))
     else:
         print("❌ 不支援的寵物類型")
-=======
+
     pass
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
 
 
 def remove_pet_interactive(pets_list):
@@ -73,7 +73,7 @@ def remove_pet_interactive(pets_list):
     #### [任務] 讓用戶輸入編號，移除對應的寵物 ####
     # 預期輸出（假設輸入 1）: "🏡 小花 已經找到新家了！"
     # 注意：用戶輸入的是 1、2、3，但 list 索引是 0、1、2
-<<<<<<< HEAD
+HEAD
     idx=int(input("請輸入要送養的寵物編號:"))-1
     if 0 <= idx < len(pets_list):
         pet=pets_list.pop(idx)
@@ -82,7 +82,7 @@ def remove_pet_interactive(pets_list):
         print("❌ 無效編號")
 =======
     pass
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
 
 
 def let_pets_interact(pets_list):
@@ -100,26 +100,26 @@ def let_pets_interact(pets_list):
         print(pet.display_art())
         
         #### [任務] 呼叫 pet.make_sound() ####
-<<<<<<< HEAD
+HEAD
         pet.make_sound()
-=======
+
         pass
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
         
         #### [任務] 用 isinstance 判斷寵物類型，呼叫對應的專屬動作 ####
         # Dog -> fetch()
         # Cat -> climb_tree()
         # Turtle -> hide_in_shell()
-<<<<<<< HEAD
+HEAD
         if isinstance(pet,Dog):
             pet.fetch()
         elif isinstance(pet,Cat):
             pet.climb_tree()
         elif isinstance(pet,Turtle):
             pet.hide_in_shell()
-=======
+
         pass
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
 
 
 def count_by_species(pets_list):
@@ -129,7 +129,7 @@ def count_by_species(pets_list):
     turtle_count = 0
     
     #### [任務] 用 for 迴圈和 isinstance 統計各類數量 ####
-<<<<<<< HEAD
+HEAD
     for pet in pets_list:
         if isinstance(pet,Cat):
             cat_count+=1
@@ -137,9 +137,9 @@ def count_by_species(pets_list):
             dog_count+=1
         elif isinstance(pet,Turtle):
             turtle_count+=1
-=======
+
     pass
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
     
     print("\n📊 寵物種類統計：")
     print(f"  🐱 貓咪: {cat_count} 隻")
@@ -169,11 +169,11 @@ def interactive_menu(pets_list):
         print("-----------------------------------------")
         
         #### [任務] 用 input() 取得用戶選擇 ####
-<<<<<<< HEAD
+HEAD
         choice = input("請選擇功能:")
-=======
+
         choice = None
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
         
         #### [任務] 用 if/elif/else 處理各選項 ####
         # 1 -> show_all_pets(pets_list)
@@ -184,7 +184,7 @@ def interactive_menu(pets_list):
         # 6 -> count_by_species(pets_list)
         # 0 -> 印出告別訊息，用 break 離開迴圈
         # 其他 -> 印出 "❌ 無效選項"
-<<<<<<< HEAD
+HEAD
         if choice == "1":
             show_all_pets(pets_list)
         elif choice == "2":
@@ -203,9 +203,9 @@ def interactive_menu(pets_list):
         else:
             print("❌ 無效選項")
         
-=======
+
         pass
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
 
 
 # =========================================
@@ -219,13 +219,13 @@ def run_shelter():
     
     #### [任務] 建立初始寵物列表，放入幾隻你喜歡的寵物 ####
     pets_in_shelter = [
-<<<<<<< HEAD
+ HEAD
         Cat("小花"),
         Dog("旺財", "柴犬"),
         Turtle("龜龜")
-=======
+
         
->>>>>>> 9082b81a6ea2369b7801a822c962f3449c9d62c3
+9082b81a6ea2369b7801a822c962f3449c9d62c3
     ]
     
     interactive_menu(pets_in_shelter)
