@@ -24,9 +24,6 @@ def show_all_pets(pets_list):
     for i, pet in enumerate(pets_list,start=1):
         print(f"{i}.{pet.name}({pet.species})")
 
-    pass
-
-
 
 def add_pet_interactive(pets_list):
     """互動式新增寵物。"""
@@ -37,9 +34,6 @@ def add_pet_interactive(pets_list):
 
     pet_type = input("請輸入寵物類型:").lower()
     pet_name = input("請輸入寵物名字:")
-
-    pet_type = None
-    pet_name = None
 
     
     #### [任務] 用 if/elif/else 根據類型建立對應物件，並加入 pets_list ####
@@ -57,9 +51,6 @@ def add_pet_interactive(pets_list):
         pets_list.addend(Turtle(pet_name))
     else:
         print("❌ 不支援的寵物類型")
-
-    pass
-
 
 
 def remove_pet_interactive(pets_list):
@@ -81,8 +72,6 @@ def remove_pet_interactive(pets_list):
     else:
         print("❌ 無效編號")
 
-    pass
-
 
 
 def let_pets_interact(pets_list):
@@ -103,8 +92,6 @@ def let_pets_interact(pets_list):
 
         pet.make_sound()
 
-        pass
-
         
         #### [任務] 用 isinstance 判斷寵物類型，呼叫對應的專屬動作 ####
         # Dog -> fetch()
@@ -117,8 +104,6 @@ def let_pets_interact(pets_list):
             pet.climb_tree()
         elif isinstance(pet,Turtle):
             pet.hide_in_shell()
-
-        pass
 
 
 
@@ -137,8 +122,6 @@ def count_by_species(pets_list):
             dog_count+=1
         elif isinstance(pet,Turtle):
             turtle_count+=1
-
-    pass
 
     
     print("\n📊 寵物種類統計：")
@@ -203,10 +186,6 @@ def interactive_menu(pets_list):
         else:
             print("❌ 無效選項")
         
-
-        pass
-
-
 
 # =========================================
 #               程式入口
