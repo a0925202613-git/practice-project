@@ -155,8 +155,6 @@ def interactive_menu(pets_list):
 
         choice = input("請選擇功能:")
 
-        choice = None
-
         
         #### [任務] 用 if/elif/else 處理各選項 ####
         # 1 -> show_all_pets(pets_list)
